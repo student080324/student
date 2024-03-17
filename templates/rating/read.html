@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "rating" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h5>{{ rating.dater | date:"d.m.Y H:i" }}</h5>			
+		</div>
+		<div class="card-body">
+			<h4>{{ rating.student }}</h4>			
+			<p><strong>{% trans "course" %}</strong>: {{ rating.course }}</p>			
+			<p><strong>{% trans "semester" %}</strong>: {{ rating.semester }}</p>			
+			<p><strong>{% trans "discipline" %}</strong>: {{ rating.discipline }}</p>			
+			<p><strong>{% trans "value" %}</strong>: {{ rating.value }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'rating_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

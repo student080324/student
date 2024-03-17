@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h1>Расписание</h1>
+</div>
+{% if schedule.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "dates" %}</p></th>
+				<th><p>{% trans "discipline" %}</p></th>
+				<th><p>{% trans "gruppa" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in schedule %}
+			<tr>
+				<td><p>{{ p.dates | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ p.discipline }}</p></td>	
+				<td><p>{{ p.gruppa }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

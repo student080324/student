@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "visit" %}</h2>
+<h3>{{ schedule }}</h3>
+<h4>{{ gruppa.cipher }}</h4>
+<p>{{ gruppa.speciality }}</p>
+<hr>
+{% if student.count > 0 %}
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<table style="width:100%">
+		<tbody>
+			{% for p in student %}
+			<tr>
+				<td>						
+					<p><input type="checkbox"  name="cbox{{p.id }}" value="on" checked /> {{ p.full_name }}</p>
+				</td>
+				<td><p>{{ p.gruppa }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<div class="div-button-center">
+		<button id="save_btn" name="save_btn" type="submit" class="btn btn-outline-success" style="width:120px">{% trans "Save" %}</button>	
+		<a id="back_btn" name="back_btn" class="btn btn-outline-info" style="width:120px" href="{% url 'schedule_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</form>
+{% endif %}
+
+{% endblock content %}
+

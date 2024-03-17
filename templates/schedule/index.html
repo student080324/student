@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "schedules" %}</h2>
+<p><a href="{% url 'schedule_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if schedule.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "dates" %}</p></th>
+				<th><p>{% trans "discipline" %}</p></th>
+				<th><p>{% trans "gruppa" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in schedule %}
+			<tr>
+				<td><p>{{ p.dates | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ p.discipline }}</p></td>	
+				<td>
+					<p>{{ p.gruppa }}</p>
+					<a href="{% url 'schedule_visit' p.id %}">{% trans "visit" %}</a> 
+
+				</td>	
+				<td>						
+					<p>
+					<a href="{% url 'schedule_edit' p.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'schedule_read' p.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'schedule_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

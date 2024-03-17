@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "disciplines" %}</h2>
+<p><a href="{% url 'discipline_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if discipline.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "discipline_title" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in discipline %}
+			<tr>
+				<td><p>{{ p.title }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'discipline_edit' p.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'discipline_read' p.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'discipline_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

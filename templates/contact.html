@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "Contacts" %}</h3>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<br>
+		<h2 align="center"></h2>
+		<address>
+			<p></p>			
+			<a href="mailto:info@news.kz">info@news.kz</a>			  
+		</address>				
+		<p><a href="tel:+7701XXXXXXX">+7(701)XXX-XX-XX</a><p>
+	</div>
+	<div class="col-md-9" style="position:relative;overflow:hidden;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d329473.0229881438!2d72.83933421020953!3d49.82351498787231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4243465ad22d0559%3A0xa90b6be0d244d433!2zMTAwMDAwINCa0LDRgNCw0LPQsNC90LTQsA!5e0!3m2!1sru!2skz!4v1710323845963!5m2!1sru!2skz" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+</div>
+{% endblock content %}

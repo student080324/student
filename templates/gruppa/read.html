@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "gruppa" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h4></h4>			
+		</div>
+		<div class="card-body">
+			<h4>{{ gruppa.cipher }}</h4>			
+		</div>
+		<div class="card-footer">
+			<p>{{ gruppa.speciality }}</p>	
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'gruppa_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

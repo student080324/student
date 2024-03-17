@@ -1,0 +1,404 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 15:30+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\journal\forms.py:29 .\journal\forms.py:51 .\journal\models.py:38
+#: .\templates\faculty\index.html:14
+msgid "faculty_title"
+msgstr "Название факультета"
+
+#: .\journal\forms.py:65 .\journal\models.py:52
+#: .\templates\speciality\index.html:15
+msgid "speciality_title"
+msgstr "Название специальности"
+
+#: .\journal\forms.py:82 .\journal\forms.py:120 .\journal\models.py:70
+#: .\templates\gruppa\index.html:14
+msgid "gruppa_cipher"
+msgstr "Шифр группы"
+
+#: .\journal\forms.py:90
+msgid "Minimum age 16 years old"
+msgstr "Минимальный возраст 16 лет"
+
+#: .\journal\forms.py:92 .\journal\forms.py:127 .\journal\forms.py:168
+#: .\journal\forms.py:188
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты и времени"
+
+#: .\journal\forms.py:105 .\journal\forms.py:119 .\journal\models.py:117
+#: .\templates\discipline\index.html:14
+msgid "discipline_title"
+msgstr "Наименование дисциплины"
+
+#: .\journal\forms.py:142 .\templates\report\index.html:69
+#: .\templates\schedule\create.html:5 .\templates\schedule\edit.html:5
+#: .\templates\schedule\read.html:5 .\templates\visit\index.html:14
+#: .\templates\visit\read.html:12
+msgid "schedule"
+msgstr "Расписание"
+
+#: .\journal\forms.py:143 .\journal\forms.py:161
+#: .\templates\rating\index.html:18 .\templates\report\index.html:70
+#: .\templates\report\index.html:98 .\templates\student\create.html:5
+#: .\templates\student\edit.html:5 .\templates\student\read.html:5
+#: .\templates\visit\index.html:15
+msgid "student"
+msgstr "Студент"
+
+#: .\journal\forms.py:160 .\templates\discipline\create.html:5
+#: .\templates\discipline\edit.html:5 .\templates\discipline\read.html:5
+#: .\templates\index.html:19 .\templates\rating\index.html:17
+#: .\templates\rating\read.html:15 .\templates\report\index.html:45
+#: .\templates\report\index.html:97 .\templates\schedule\index.html:15
+#: .\templates\schedule\list.html:15 .\templates\schedule\read.html:12
+msgid "discipline"
+msgstr "Дисциплина"
+
+#: .\journal\models.py:51 .\templates\speciality\index.html:14
+#: .\templates\speciality\read.html:9
+msgid "speciality_cipher"
+msgstr "Шифр специальности"
+
+#: .\journal\models.py:72 .\templates\gruppa\index.html:16
+msgid "language"
+msgstr "Язык обучения"
+
+#: .\journal\models.py:93 .\templates\student\index.html:14
+msgid "full_name"
+msgstr "ФИО"
+
+#: .\journal\models.py:94 .\templates\student\index.html:15
+#: .\templates\student\read.html:12
+msgid "sex"
+msgstr "Пол (М/Ж)"
+
+#: .\journal\models.py:95 .\templates\student\index.html:16
+#: .\templates\student\read.html:13
+msgid "iin"
+msgstr "ИИН"
+
+#: .\journal\models.py:96 .\templates\student\index.html:17
+#: .\templates\student\read.html:14
+msgid "birthday"
+msgstr "Дата рождения"
+
+#: .\journal\models.py:97 .\templates\student\index.html:18
+#: .\templates\student\read.html:15
+msgid "phone"
+msgstr "Телефон"
+
+#: .\journal\models.py:98 .\templates\student\index.html:19
+#: .\templates\student\read.html:16
+msgid "address"
+msgstr "Адрес"
+
+#: .\journal\models.py:130 .\templates\index.html:18
+#: .\templates\report\index.html:44 .\templates\schedule\index.html:14
+#: .\templates\schedule\list.html:14
+msgid "dates"
+msgstr "Дата и время"
+
+#: .\journal\models.py:152 .\templates\report\index.html:71
+#: .\templates\visit\index.html:16 .\templates\visit\read.html:13
+msgid "visited"
+msgstr "Посещение (да/нет)"
+
+#: .\journal\models.py:170 .\templates\rating\index.html:14
+#: .\templates\report\index.html:94
+msgid "dater"
+msgstr "Дата"
+
+#: .\journal\models.py:171 .\templates\rating\index.html:15
+#: .\templates\rating\read.html:13 .\templates\report\index.html:95
+msgid "course"
+msgstr "Курс"
+
+#: .\journal\models.py:172 .\templates\rating\index.html:16
+#: .\templates\rating\read.html:14 .\templates\report\index.html:96
+msgid "semester"
+msgstr "Семестр"
+
+#: .\journal\models.py:175 .\templates\rating\index.html:19
+#: .\templates\rating\read.html:16 .\templates\report\index.html:99
+msgid "value"
+msgstr "Оценка"
+
+#: .\journal\models.py:194 .\templates\news\index.html:14
+msgid "daten"
+msgstr "Дата"
+
+#: .\journal\models.py:195
+msgid "news_title"
+msgstr "Заголовок новости"
+
+#: .\journal\models.py:196
+msgid "news_details"
+msgstr "Детали"
+
+#: .\journal\models.py:197
+msgid "news_photo"
+msgstr "Фотография"
+
+#: .\templates\base.html:44
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:46 .\templates\base.html:68
+#: .\templates\report\index.html:26 .\templates\report\index.html:38
+#: .\templates\schedule\index.html:6
+msgid "schedules"
+msgstr "Расписание"
+
+#: .\templates\base.html:49 .\templates\base.html:74
+#: .\templates\news\index.html:3 .\templates\news\index.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:8
+msgid "newss"
+msgstr "Новости"
+
+#: .\templates\base.html:52
+msgid "contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:62 .\templates\faculty\index.html:6
+msgid "facultys"
+msgstr "Факультеты"
+
+#: .\templates\base.html:63 .\templates\speciality\index.html:6
+msgid "specialitys"
+msgstr "Специальности"
+
+#: .\templates\base.html:64 .\templates\gruppa\index.html:6
+msgid "gruppas"
+msgstr "Группы"
+
+#: .\templates\base.html:65 .\templates\student\index.html:6
+msgid "students"
+msgstr "Студенты"
+
+#: .\templates\base.html:66 .\templates\discipline\index.html:6
+msgid "disciplines"
+msgstr "Дисциплины"
+
+#: .\templates\base.html:69 .\templates\report\index.html:29
+#: .\templates\report\index.html:63 .\templates\visit\index.html:6
+msgid "visits"
+msgstr "Посещение"
+
+#: .\templates\base.html:70 .\templates\rating\index.html:6
+msgid "ratings"
+msgstr "Оценки"
+
+#: .\templates\base.html:72
+msgid "report"
+msgstr "Отчет"
+
+#: .\templates\base.html:79
+msgid "My account"
+msgstr "Моя учетная запись"
+
+#: .\templates\base.html:80
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\base.html:82
+msgid "Log out"
+msgstr "Выход"
+
+#: .\templates\base.html:87
+msgid "Log In"
+msgstr "Войти"
+
+#: .\templates\base.html:88
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\templates\contact.html:7
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\templates\discipline\create.html:3 .\templates\discipline\index.html:7
+#: .\templates\faculty\create.html:3 .\templates\faculty\index.html:7
+#: .\templates\gruppa\create.html:3 .\templates\gruppa\index.html:7
+#: .\templates\news\index.html:9 .\templates\rating\create.html:3
+#: .\templates\rating\index.html:7 .\templates\schedule\create.html:3
+#: .\templates\schedule\index.html:7 .\templates\speciality\create.html:3
+#: .\templates\speciality\index.html:7 .\templates\student\create.html:3
+#: .\templates\student\index.html:7 .\templates\visit\create.html:3
+#: .\templates\visit\index.html:7
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\discipline\create.html:12 .\templates\discipline\edit.html:12
+#: .\templates\faculty\create.html:12 .\templates\faculty\edit.html:12
+#: .\templates\gruppa\create.html:12 .\templates\gruppa\edit.html:12
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+#: .\templates\rating\create.html:12 .\templates\rating\edit.html:12
+#: .\templates\schedule\create.html:12 .\templates\schedule\edit.html:12
+#: .\templates\schedule\visit.html:27 .\templates\speciality\create.html:12
+#: .\templates\speciality\edit.html:12 .\templates\student\create.html:12
+#: .\templates\student\edit.html:12 .\templates\visit\create.html:12
+#: .\templates\visit\edit.html:12
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\discipline\create.html:13 .\templates\discipline\edit.html:13
+#: .\templates\discipline\read.html:18 .\templates\faculty\create.html:13
+#: .\templates\faculty\edit.html:13 .\templates\faculty\read.html:18
+#: .\templates\gruppa\create.html:13 .\templates\gruppa\edit.html:13
+#: .\templates\gruppa\read.html:20 .\templates\news\create.html:14
+#: .\templates\news\edit.html:14 .\templates\news\read.html:29
+#: .\templates\rating\create.html:13 .\templates\rating\edit.html:13
+#: .\templates\rating\read.html:23 .\templates\schedule\create.html:13
+#: .\templates\schedule\edit.html:13 .\templates\schedule\read.html:20
+#: .\templates\schedule\visit.html:28 .\templates\speciality\create.html:13
+#: .\templates\speciality\edit.html:13 .\templates\speciality\read.html:20
+#: .\templates\student\create.html:13 .\templates\student\edit.html:13
+#: .\templates\student\read.html:24 .\templates\visit\create.html:13
+#: .\templates\visit\edit.html:13 .\templates\visit\read.html:20
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\discipline\edit.html:3 .\templates\discipline\index.html:24
+#: .\templates\faculty\edit.html:3 .\templates\faculty\index.html:24
+#: .\templates\gruppa\edit.html:3 .\templates\gruppa\index.html:28
+#: .\templates\news\edit.html:3 .\templates\news\index.html:30
+#: .\templates\rating\edit.html:3 .\templates\rating\index.html:34
+#: .\templates\schedule\edit.html:3 .\templates\schedule\index.html:32
+#: .\templates\speciality\edit.html:3 .\templates\speciality\index.html:28
+#: .\templates\student\edit.html:3 .\templates\student\index.html:36
+#: .\templates\visit\edit.html:3 .\templates\visit\index.html:28
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\discipline\index.html:3 .\templates\faculty\index.html:3
+#: .\templates\gruppa\index.html:3 .\templates\rating\index.html:3
+#: .\templates\schedule\index.html:3 .\templates\schedule\list.html:3
+#: .\templates\schedule\visit.html:3 .\templates\speciality\index.html:3
+#: .\templates\student\index.html:3 .\templates\visit\index.html:3
+msgid "List"
+msgstr "Список"
+
+#: .\templates\discipline\index.html:25 .\templates\discipline\read.html:3
+#: .\templates\faculty\index.html:25 .\templates\faculty\read.html:3
+#: .\templates\gruppa\index.html:29 .\templates\gruppa\read.html:3
+#: .\templates\news\index.html:31 .\templates\rating\index.html:35
+#: .\templates\rating\read.html:3 .\templates\schedule\index.html:33
+#: .\templates\schedule\read.html:3 .\templates\speciality\index.html:29
+#: .\templates\speciality\read.html:3 .\templates\student\index.html:37
+#: .\templates\student\read.html:3 .\templates\visit\index.html:29
+#: .\templates\visit\read.html:3
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\discipline\index.html:26 .\templates\faculty\index.html:26
+#: .\templates\gruppa\index.html:30 .\templates\news\index.html:32
+#: .\templates\rating\index.html:36 .\templates\schedule\index.html:34
+#: .\templates\speciality\index.html:30 .\templates\student\index.html:38
+#: .\templates\visit\index.html:30
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\faculty\create.html:5 .\templates\faculty\edit.html:5
+#: .\templates\faculty\read.html:5 .\templates\speciality\index.html:16
+#: .\templates\speciality\read.html:15
+msgid "faculty"
+msgstr "Факультет"
+
+#: .\templates\gruppa\create.html:5 .\templates\gruppa\edit.html:5
+#: .\templates\gruppa\read.html:5 .\templates\index.html:20
+#: .\templates\report\index.html:46 .\templates\schedule\index.html:16
+#: .\templates\schedule\list.html:16 .\templates\schedule\read.html:15
+#: .\templates\student\index.html:20 .\templates\student\read.html:19
+msgid "gruppa"
+msgstr "Группа"
+
+#: .\templates\gruppa\index.html:15 .\templates\speciality\create.html:5
+#: .\templates\speciality\edit.html:5 .\templates\speciality\read.html:5
+msgid "speciality"
+msgstr "Специальность"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Student"
+
+#: .\templates\index.html:33
+msgid "all schedule"
+msgstr "Все расписание"
+
+#: .\templates\index.html:52
+msgid "all newss"
+msgstr "Все новости"
+
+#: .\templates\news\create.html:3
+msgid "Create"
+msgstr "Добавить"
+
+#: .\templates\news\create.html:6 .\templates\news\edit.html:6
+#: .\templates\news\read.html:7
+msgid "news"
+msgstr "Новость"
+
+#: .\templates\news\index.html:15
+msgid "title"
+msgstr "Заголовок"
+
+#: .\templates\news\list.html:14
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\news\list.html:15 .\templates\report\index.html:20
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\news\read.html:4
+msgid "Read"
+msgstr "Просмотреть"
+
+#: .\templates\rating\create.html:5 .\templates\rating\edit.html:5
+#: .\templates\rating\read.html:5 .\templates\report\index.html:32
+#: .\templates\report\index.html:88
+msgid "rating"
+msgstr "Оценка"
+
+#: .\templates\report\index.html:4 .\templates\report\index.html:8
+msgid "Reports"
+msgstr "Отчеты"
+
+#: .\templates\report\index.html:13
+msgid "Date range"
+msgstr "Диапазон дат"
+
+#: .\templates\report\index.html:19
+msgid "Go"
+msgstr "Выполнить"
+
+#: .\templates\schedule\index.html:27 .\templates\schedule\visit.html:6
+#: .\templates\visit\create.html:5 .\templates\visit\edit.html:5
+#: .\templates\visit\read.html:5
+msgid "visit"
+msgstr "Посещение"

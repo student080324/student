@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "students" %}</h2>
+<p><a href="{% url 'student_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if student.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "full_name" %}</p></th>
+				<th><p>{% trans "sex" %}</p></th>
+				<th><p>{% trans "iin" %}</p></th>
+				<th><p>{% trans "birthday" %}</p></th>
+				<th><p>{% trans "phone" %}</p></th>
+				<th><p>{% trans "address" %}</p></th>
+				<th><p>{% trans "gruppa" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in student %}
+			<tr>
+				<td><p>{{ p.full_name }}</p></td>	
+				<td><p>{{ p.sex }}</p></td>	
+				<td><p>{{ p.iin }}</p></td>	
+				<td><p>{{ p.birthday | date:"d.m.Y" }}</p></td>	
+				<td><p>{{ p.phone }}</p></td>	
+				<td><p>{{ p.address }}</p></td>	
+				<td><p>{{ p.gruppa }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'student_edit' p.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'student_read' p.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'student_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+
