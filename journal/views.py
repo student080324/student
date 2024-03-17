@@ -605,6 +605,7 @@ def schedule_list(request):
    try:
         # Группы (для поиска)
         gruppa = Gruppa.objects.all().order_by('cipher')
+        selected_item_gruppa = '-----' 
         if 'searchBtn' in request.POST:
             start_date = request.POST.get("start_date")
             print(start_date)
