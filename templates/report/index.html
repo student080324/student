@@ -10,9 +10,21 @@
 <form method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
 	<div style="margin-top:10px">
-		<p>{% trans "Date range" %}:
-		<input type="date" value="{{start_date}}" name ="start_date" id ="start_date">
-		<input type="date" value="{{finish_date}}" name = "finish_date" id ="finish_date">
+		<p>{% trans "Date range" %}:		
+			<input type="date" value="{{start_date}}" name ="start_date" id ="start_date">
+			<input type="date" value="{{finish_date}}" name = "finish_date" id ="finish_date">
+		</p>
+		<p>{% trans "gruppa" %}:
+			<select name="item_gruppa" class="chosen" style="margin:5px">
+				<option value="-----">-----</option>
+				{% for entry in gruppa %}
+					{% if entry.cipher == selected_item_gruppa %}
+						<option value="{{ entry.cipher }}" selected="selected">{{ entry.cipher }}</option>
+					{% else %}
+						<option value="{{ entry.cipher }}">{{ entry.cipher }}</option>
+					{% endif %}
+				{% endfor %}
+			</select>
 		</p>
 	</div>
 	<div class="row" style="margin-top:10px">
@@ -76,7 +88,15 @@
 					<tr>
 						<td><p>{{ v.schedule }}</p></td>	
 						<td><p>{{ v.student }}</p></td>	
-						<td><p>{{ v.visited }}</p></td>			
+						<td>
+							<p>
+							{% if v.visited == True %}
+								<b>■</b>
+							{% else %}
+								<b>□</b>
+							{% endif %}
+							</p>
+						</td>			
 					</tr>
 					{% endfor %}
 				</tbody>

@@ -22,7 +22,15 @@
 			<tr>
 				<td><p>{{ p.schedule }}</p></td>	
 				<td><p>{{ p.student }}</p></td>	
-				<td><p>{{ p.visited }}</p></td>	
+				<td>
+					<p>
+					{% if p.visited == True %}
+						<b>■</b>
+					{% else %}
+						<b>□</b>
+					{% endif %}
+					</p>
+				</td>
 				<td>						
 					<p>
 					<a href="{% url 'visit_edit' p.id %}">{% trans "Change" %}</a> |

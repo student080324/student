@@ -10,7 +10,14 @@
 		</div>
 		<div class="card-body">
 			<p><strong>{% trans "schedule" %}</strong>: {{ visit.schedule }}</p>			
-			<p>{% trans "visited" %}: {{ visit.visited }}</p>	
+			<p>
+				{% trans "visited" %}: 
+				{% if visit.visited == True %}
+					<b>■</b>
+				{% else %}
+					<b>□</b>
+				{% endif %}
+			</p>	
 		</div>
 		<div class="card-footer">
 		</div>		

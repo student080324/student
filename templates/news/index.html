@@ -27,9 +27,9 @@
 			</td>
 			<td>
 				<p>
-				<a class="btn btn-outline-primary" style="width:120px; margin: 2px;" href="{% url 'news_edit' n.id %}">{% trans "Change" %}</a> 
-				<a class="btn btn-outline-info" style="width:120px; margin: 2px;" href="{% url 'news_read' n.id %}">{% trans "View" %}</a> 
-				<a class="btn btn-outline-danger" style="width:120px; margin: 2px;" onclick="return confirm('Удалить запись?')" href="{% url 'news_delete' n.id %}">{% trans "Delete" %}</a>
+				<a href="{% url 'news_edit' n.id %}">{% trans "Change" %}</a> 
+				<a href="{% url 'news_read' n.id %}">{% trans "View" %}</a> 
+				<a onclick="return confirm('Удалить запись?')" href="{% url 'news_delete' n.id %}">{% trans "Delete" %}</a>
 				</p>
 			</td>			
 		</tr>

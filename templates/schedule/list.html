@@ -6,6 +6,32 @@
 <div class="div-width-100-text-center">
 	<h1>Расписание</h1>
 </div>
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div style="margin-top:10px">
+		<p>{% trans "Date range" %}:		
+			<input type="date" value="{{start_date}}" name ="start_date" id ="start_date">
+			<input type="date" value="{{finish_date}}" name = "finish_date" id ="finish_date">
+		</p>
+		<p>{% trans "gruppa" %}:
+			<select name="item_gruppa" class="chosen" style="margin:5px">
+				<option value="-----">-----</option>
+				{% for entry in gruppa %}
+					{% if entry.cipher == selected_item_gruppa %}
+						<option value="{{ entry.cipher }}" selected="selected">{{ entry.cipher }}</option>
+					{% else %}
+						<option value="{{ entry.cipher }}">{{ entry.cipher }}</option>
+					{% endif %}
+				{% endfor %}
+			</select>
+		</p>
+	</div>
+	<div class="row" style="margin-top:10px">
+		<button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Go" %}</button>
+		<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button>
+	</div>
+</form>
+<hr>
 {% if schedule.count > 0 %}
 <div class="row">
 	<table id="myTable" class="table-manager" style="width:100%">

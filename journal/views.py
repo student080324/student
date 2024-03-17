@@ -85,6 +85,8 @@ def contact(request):
 #@group_required("Managers")
 def report_index(request):
     try:
+        # Группы (для поиска)
+        gruppa = Gruppa.objects.all().order_by('cipher')
         if 'searchBtn' in request.POST:
             start_date = request.POST.get("start_date")
             print(start_date)
@@ -94,17 +96,26 @@ def report_index(request):
             # Расписание
             schedule = Schedule.objects.filter(dates__range=[start_date, finish_date]).order_by('dates')
             finish_date = request.POST.get("finish_date")
-            # Посещение
-            schedule_query = Schedule.objects.only('id').filter(dates__range=[start_date, finish_date])
+            # Поиск по группе
+            selected_item_gruppa = request.POST.get('item_gruppa')
+            print(selected_item_gruppa)
+            if selected_item_gruppa != '-----':
+                gruppa_query = Gruppa.objects.filter(cipher = selected_item_gruppa).only('id').all()
+                schedule = schedule.filter(gruppa_id__in = gruppa_query).all()
+                schedule_query = schedule.only('id').filter(dates__range=[start_date, finish_date])
+            else:
+                schedule_query = Schedule.objects.only('id').filter(dates__range=[start_date, finish_date])
             for row in schedule_query:
                 print(row)
+            # Посещение
             visit = Visit.objects.filter(schedule_id__in = schedule_query).all()
-
-            #employee_query = Employee.objects.filter(company = 'Private').only('id').all()
-            #person = Person.objects.value('name','age').filter(id__in = employee_query)
-
             # Успеваемость
-            rating = Rating.objects.filter(dater__range=[start_date, finish_date]).order_by('dater')
+            if selected_item_gruppa != '-----':
+                gruppa_query = Gruppa.objects.filter(cipher = selected_item_gruppa).only('id').all()
+                student_query = Student.objects.filter(gruppa_id__in = gruppa_query).only('id').all()
+                rating = Rating.objects.filter(dater__range=[start_date, finish_date]).filter(student_id__in = student_query).order_by('dater')
+            else:
+                rating = Rating.objects.filter(dater__range=[start_date, finish_date]).order_by('dater')
         else:
             start_date = datetime(datetime.now().year, 1, 1, 0, 0).strftime('%Y-%m-%d') 
             finish_date = datetime(datetime.now().year, datetime.now().month, datetime.now().day, 23, 59).strftime('%Y-%m-%d') 
@@ -114,7 +125,7 @@ def report_index(request):
             visit = Visit.objects.all()
             # Расписание
             rating = Rating.objects.all().order_by('dater')
-        return render(request, "report/index.html", {"schedule": schedule, "visit": visit, "rating": rating, "start_date": start_date, "finish_date": finish_date})        
+        return render(request, "report/index.html", {"schedule": schedule, "visit": visit, "rating": rating, "start_date": start_date, "finish_date": finish_date, "gruppa": gruppa, "selected_item_gruppa": selected_item_gruppa})        
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
@@ -591,10 +602,31 @@ def schedule_index(request):
 #@login_required
 #@group_required("Managers")
 def schedule_list(request):
-    try:
-        schedule = Schedule.objects.all().order_by('-dates')
-        return render(request, "schedule/list.html", {"schedule": schedule,})
-    except Exception as exception:
+   try:
+        # Группы (для поиска)
+        gruppa = Gruppa.objects.all().order_by('cipher')
+        if 'searchBtn' in request.POST:
+            start_date = request.POST.get("start_date")
+            print(start_date)
+            finish_date = request.POST.get("finish_date")
+            finish_date = str(datetime.strptime(finish_date, "%Y-%m-%d") + timedelta(days=1))
+            print(finish_date)
+            # Расписание
+            schedule = Schedule.objects.filter(dates__range=[start_date, finish_date]).order_by('dates')
+            finish_date = request.POST.get("finish_date")
+            # Поиск по группе
+            selected_item_gruppa = request.POST.get('item_gruppa')
+            print(selected_item_gruppa)
+            if selected_item_gruppa != '-----':
+                gruppa_query = Gruppa.objects.filter(cipher = selected_item_gruppa).only('id').all()
+                schedule = schedule.filter(gruppa_id__in = gruppa_query).all()
+        else:
+            start_date = datetime(datetime.now().year, 1, 1, 0, 0).strftime('%Y-%m-%d') 
+            finish_date = datetime(datetime.now().year, datetime.now().month, datetime.now().day, 23, 59).strftime('%Y-%m-%d') 
+            # Расписание
+            schedule = Schedule.objects.all().order_by('dates')
+        return render(request, "schedule/list.html", {"schedule": schedule, "start_date": start_date, "finish_date": finish_date, "gruppa": gruppa, "selected_item_gruppa": selected_item_gruppa})   
+   except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
