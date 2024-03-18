@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "visits" %}</h2>
+<hr>
+{% if visit.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "schedule" %}</p></th>
+				<th><p>{% trans "student" %}</p></th>
+				<th><p>{% trans "visited" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in visit %}
+			<tr>
+				<td><p>{{ p.schedule }}</p></td>	
+				<td><p>{{ p.student }}</p></td>	
+				<td>
+					<p>
+					{% if p.visited == True %}
+						<b>■</b>
+					{% else %}
+						<b>□</b>
+					{% endif %}
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

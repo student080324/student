@@ -30,9 +30,13 @@ urlpatterns = [
     path('', views.index),
     path('index/', views.index, name='index'),
     path('contact/', views.contact, name='contact'),
-    path('report/index/', views.report_index, name='report_index'),
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
+
+    path('report/index/', views.report_index, name='report_index'),
+    path('report/report_1/', views.report_1, name='report_1'),
+    path('report/report_2/', views.report_2, name='report_2'),
+    path('report/report_3/', views.report_3, name='report_3'),
 
     path('faculty/index/', views.faculty_index, name='faculty_index'),
     path('faculty/create/', views.faculty_create, name='faculty_create'),
@@ -77,12 +81,14 @@ urlpatterns = [
     path('visit/edit/<int:id>/', views.visit_edit, name='visit_edit'),
     path('visit/delete/<int:id>/', views.visit_delete, name='visit_delete'),
     path('visit/read/<int:id>/', views.visit_read, name='visit_read'),
+    path('visit/list/', views.visit_list, name='visit_list'),
     
     path('rating/index/', views.rating_index, name='rating_index'),
     path('rating/create/', views.rating_create, name='rating_create'),
     path('rating/edit/<int:id>/', views.rating_edit, name='rating_edit'),
     path('rating/delete/<int:id>/', views.rating_delete, name='rating_delete'),
     path('rating/read/<int:id>/', views.rating_read, name='rating_read'),
+    path('rating/list/', views.rating_list, name='rating_list'),
 
     path('news/index/', views.news_index, name='news_index'),
     path('news/list/', views.news_list, name='news_list'),

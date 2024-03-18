@@ -69,13 +69,14 @@ class GruppaForm(forms.ModelForm):
 class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = ('full_name', 'sex', 'iin', 'birthday', 'phone', 'address', 'gruppa')
+        fields = ('full_name', 'sex', 'iin', 'birthday', 'phone', 'address', 'email', 'gruppa')
         widgets = {
             'full_name': TextInput(attrs={"size":"100"}),
             'iin': TextInput(attrs={"size":"50"}),
             'birthday': DateInput(attrs={"type":"date"}),
             'phone': TextInput(attrs={"size":"40", "type":"tel", "pattern": "+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"}),
             'address': TextInput(attrs={"size":"100"}),
+            'email': TextInput(attrs={"size":"50", "type":"email"}), 
             'gruppa': forms.Select(attrs={'class': 'chosen'}),
         }
         labels = {

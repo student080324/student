@@ -52,7 +52,6 @@
 					<!-- <a class="nav-link" href="{% url 'contact' %}">{% trans "contacts" %}</a> -->
 				<!-- </li> -->
 				{% if user.is_authenticated %}
-
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						{{ user.username }}
@@ -69,11 +68,12 @@
 								<li><a class="dropdown-item" href="{% url 'visit_index' %}">{% trans "visits" %}</a></li>
 								<li><a class="dropdown-item" href="{% url 'rating_index' %}">{% trans "ratings" %}</a></li>
 								<div class="dropdown-divider"></div>
-								<li><a class="dropdown-item" href="{% url 'report_index' %}">{% trans "report" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'report_index' %}">{% trans "Reports" %}</a></li>
 								<div class="dropdown-divider"></div>
 								<li><a class="dropdown-item" href="{% url 'news_index' %}">{% trans "newss" %}</a></li>
 							{% else %}
-								
+								<li><a class="dropdown-item" href="{% url 'visit_list' %}">{% trans "visits" %}</a></li>
+								<li><a class="dropdown-item" href="{% url 'rating_list' %}">{% trans "ratings" %}</a></li>
 							{% endif %}
 							<div class="dropdown-divider"></div>
 							<li><a class="dropdown-item" href="{% url 'my_account' %}">{% trans "My account" %}</a></li>
@@ -88,18 +88,18 @@
 					<a href="{% url 'signup' %}" class="btn btn-primary ml-2">{% trans "Sign up" %}</a>
 				</form>
 				{% endif %}
-				<!-- <form action="{% url 'set_language' %}" method="post"> -->
-					<!-- {% csrf_token %} -->
-					<!-- <input name="next" type="hidden" value="{{ redirect_to }}" /> -->
-					<!-- {% get_current_language as LANGUAGE_CODE %} -->
-					<!-- {% get_available_languages as LANGUAGES %} -->
-					<!-- {% get_language_info_list for LANGUAGES as languages %} -->
-					<!-- {% for language in languages %} -->
-					<!-- <button type="submit" class="btn btn-outline-info" name="language" value="{{ language.code }}"> -->
-						<!-- {{ language.code }} -->
-					<!-- </button> -->
-					<!-- {% endfor %} -->
-				<!-- </form>				 -->
+				<form action="{% url 'set_language' %}" method="post">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ redirect_to }}" />
+					{% get_current_language as LANGUAGE_CODE %}
+					{% get_available_languages as LANGUAGES %}
+					{% get_language_info_list for LANGUAGES as languages %}
+					{% for language in languages %}
+					<button type="submit" class="btn btn-outline-warning" name="language" value="{{ language.code }}">
+						{{ language.code }}
+					</button>
+					{% endfor %}
+				</form>				
 			</ul>
 		</div>
 	</div>

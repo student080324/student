@@ -95,7 +95,8 @@ class Student(models.Model):
     iin = models.CharField(_('iin'), unique=True, max_length=12)
     birthday = models.DateTimeField(_('birthday'))
     phone = models.CharField(_('phone'), max_length=64)    
-    address = models.CharField(_('address'), max_length=96)    
+    address = models.CharField(_('address'), max_length=96)   
+    email = models.CharField(_('email'), blank=True, null=True, max_length=128)
     gruppa = models.ForeignKey(Gruppa, related_name='student_gruppa', on_delete=models.CASCADE)
     class Meta:
         # Параметры модели

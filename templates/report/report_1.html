@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block title %}{% trans "List" %}{% endblock title %}
+{% load static %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
 {% block header %}{% endblock header %}
 {% block content %}
 <div class="div-width-100-text-center">
-	<h1>{% trans "schedules" %}</h1>
+	<h3>{% trans "Reports" %}</h3>
 </div>
 <form method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
@@ -32,7 +33,9 @@
 	</div>
 </form>
 <hr>
-{% if schedule.count > 0 %}
+<div class="row">
+	<h1>{% trans "schedules" %}</h1>
+</div>
 <div class="row">
 	<table id="myTable" class="table-manager" style="width:100%">
 		<thead>
@@ -43,16 +46,18 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for p in schedule %}
+			{% for s in schedule %}
 			<tr>
-				<td><p>{{ p.dates | date:"d.m.Y H:i" }}</p></td>	
-				<td><p>{{ p.discipline }}</p></td>	
-				<td><p>{{ p.gruppa }}</p></td>	
+				<td><p>{{ s.dates | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ s.discipline }}</p></td>	
+				<td><p>{{ s.gruppa }}</p></td>									
 			</tr>
 			{% endfor %}
 		</tbody>
 	</table>
-</div>
-{% endif %}
-{% endblock content %}
+</div>		
+<div class="div-button-center">
+	<a class="btn btn-outline-info" style="width:120px" href="{% url 'report_index' %}">{% trans "Back" %}</a> 	
+</div>	
 
+{% endblock content %}

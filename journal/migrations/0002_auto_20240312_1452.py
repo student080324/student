@@ -183,7 +183,8 @@ def insert_student(apps, param):
     student.birthday = param[2]
     student.phone = param[3]
     student.address = param[4]
-    student.gruppa_id = param[5]
+    student.email = param[5]
+    student.gruppa_id = param[6]
     student.save()
     return
 
@@ -284,32 +285,17 @@ def new_data(apps, schema_editor):
         managers.user_set.add(user)
         print("Менеджер добавлен в группу менеджеров")
 
-        # Простые пользователи (заявители) id3-27
-        user = User.objects.create_user(username='user1', password='Uu0066+-', email='user1@mail.ru', first_name='Дина', last_name='Мусина', last_login=datetime.now())
-        user = User.objects.create_user(username='user2', password='Uu0066+-', email='user2@mail.ru', first_name='Адия', last_name='Жунусова', last_login=datetime.now())
-        user = User.objects.create_user(username='user3', password='Uu0066+-', email='user3@mail.ru', first_name='Айнура', last_name='Кенина', last_login=datetime.now())
-        user = User.objects.create_user(username='user4', password='Uu0066+-', email='user4@mail.ru', first_name='Рустем', last_name='Какимов', last_login=datetime.now())
-        user = User.objects.create_user(username='user5', password='Uu0066+-', email='user5@mail.ru', first_name='Алишер', last_name='Кабдуалиев', last_login=datetime.now())
-        user = User.objects.create_user(username='user6', password='Uu0066+-', email='user6@mail.ru', first_name='Бауржан', last_name='Арыкбаев', last_login=datetime.now())
-        user = User.objects.create_user(username='user7', password='Uu0066+-', email='user7@mail.ru', first_name='Алишер', last_name='Танатаров', last_login=datetime.now())
-        user = User.objects.create_user(username='user8', password='Uu0066+-', email='user8@mail.ru', first_name='Мерует', last_name='Искакова', last_login=datetime.now())
-        user = User.objects.create_user(username='user9', password='Uu0066+-', email='user9@mail.ru', first_name='Ольга', last_name='Муравьева', last_login=datetime.now())
-        user = User.objects.create_user(username='user10', password='Uu0066+-', email='user10@mail.ru', first_name='Ақжарқын', last_name='Сансызбаева', last_login=datetime.now())
-        user = User.objects.create_user(username='user11', password='Uu0066+-', email='user11@mail.ru', first_name='Арайлым', last_name='Алматова', last_login=datetime.now())
-        user = User.objects.create_user(username='user12', password='Uu0066+-', email='user12@mail.ru', first_name='Айгерім', last_name='Дүйсенбиева', last_login=datetime.now())
-        user = User.objects.create_user(username='user13', password='Uu0066+-', email='user13@mail.ru', first_name='Салтанат', last_name='Зиноллаева', last_login=datetime.now())
-        user = User.objects.create_user(username='user14', password='Uu0066+-', email='user14@mail.ru', first_name='Сейтқасым', last_name='Болат', last_login=datetime.now())
-        user = User.objects.create_user(username='user15', password='Uu0066+-', email='user15@mail.ru', first_name='Сара', last_name='Фазилова', last_login=datetime.now())
-        user = User.objects.create_user(username='user16', password='Uu0066+-', email='user16@mail.ru', first_name='Бектас', last_name='Ерсейіт', last_login=datetime.now())
-        user = User.objects.create_user(username='user17', password='Uu0066+-', email='user17@mail.ru', first_name='Диас', last_name='Мырзаш', last_login=datetime.now())
-        user = User.objects.create_user(username='user18', password='Uu0066+-', email='user18@mail.ru', first_name='Нұржан', last_name='Жүрсінбек', last_login=datetime.now())
-        user = User.objects.create_user(username='user19', password='Uu0066+-', email='user19@mail.ru', first_name='Дина', last_name='Жағыпар', last_login=datetime.now())
-        user = User.objects.create_user(username='user20', password='Uu0066+-', email='user20@mail.ru', first_name='Жастілек', last_name='Жасталап', last_login=datetime.now())
-        user = User.objects.create_user(username='user21', password='Uu0066+-', email='user21@mail.ru', first_name='Еркебұлан', last_name='Қадыхан', last_login=datetime.now())
-        user = User.objects.create_user(username='user22', password='Uu0066+-', email='user22@mail.ru', first_name='Молдир', last_name='Бутабекова', last_login=datetime.now())
-        user = User.objects.create_user(username='user23', password='Uu0066+-', email='user23@mail.ru', first_name='Аружан', last_name='Таурбекова', last_login=datetime.now())
-        user = User.objects.create_user(username='user24', password='Uu0066+-', email='user24@mail.ru', first_name='Алтынай', last_name='Қожанова', last_login=datetime.now())
-        user = User.objects.create_user(username='user25', password='Uu0066+-', email='user25@mail.ru', first_name='Эльнара', last_name='Иминова', last_login=datetime.now())
+        # Простые пользователи (заявители) id3-13
+        user = User.objects.create_user(username='user1', password='Uu0066+-', email='user1@mail.ru', first_name='Әлішер', last_name='Бейсембек', last_login=datetime.now())
+        user = User.objects.create_user(username='user2', password='Uu0066+-', email='user2@mail.ru', first_name='Амина', last_name='Мугынова', last_login=datetime.now())
+        user = User.objects.create_user(username='user3', password='Uu0066+-', email='user3@mail.ru', first_name='Алибек', last_name='Кадылкаиров', last_login=datetime.now())
+        user = User.objects.create_user(username='user4', password='Uu0066+-', email='user4@mail.ru', first_name='Владислав', last_name='Антонюк', last_login=datetime.now())
+        user = User.objects.create_user(username='user5', password='Uu0066+-', email='user5@mail.ru', first_name='Диана', last_name='Мухамбеткалиева', last_login=datetime.now())
+        user = User.objects.create_user(username='user6', password='Uu0066+-', email='user6@mail.ru', first_name='Даниел', last_name='Михаилов', last_login=datetime.now())
+        user = User.objects.create_user(username='user7', password='Uu0066+-', email='user7@mail.ru', first_name='Батухан', last_name='Нұрділдаев', last_login=datetime.now())
+        user = User.objects.create_user(username='user8', password='Uu0066+-', email='user8@mail.ru', first_name='Алтынай', last_name='Жанабекова', last_login=datetime.now())
+        user = User.objects.create_user(username='user9', password='Uu0066+-', email='user9@mail.ru', first_name='Сұлтан', last_name='Тохтарханов', last_login=datetime.now())
+        user = User.objects.create_user(username='user10', password='Uu0066+-', email='user10@mail.ru', first_name='Айнұр', last_name='Беркінбекова', last_login=datetime.now())
         print("Созданы простые пользователи")
 
         # Добавить Факультеты, специальности и группы
@@ -338,249 +324,249 @@ def new_data(apps, schema_editor):
 
         # Добавить Студенты 1-20 группа id 1,  21-40 группа id 2, 41-60 группа id 3,  61-80 группа id 4
 
-        parameters = ["Бейсембек Әлішер Ербулатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Бейсембек Әлішер Ербулатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user1@mail.ru", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Мугынова Амина Санатқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Мугынова Амина Санатқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user2@mail.ru", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Кадылкаиров Алибек Муратович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Кадылкаиров Алибек Муратович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user3@mail.ru", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Турсунова Карина Муратовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Турсунова Карина Муратовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Конысбай Азамат Бахытжанулы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Конысбай Азамат Бахытжанулы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Сали Малика Нағыйқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Сали Малика Нағыйқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Киселев Илья Александрович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Киселев Илья Александрович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Уранхаева Еркежан Айдосовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Уранхаева Еркежан Айдосовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Балғабек Қайырхан Мелдеханұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Балғабек Қайырхан Мелдеханұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Кузенбекова Асемгуль Шеризаткызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Кузенбекова Асемгуль Шеризаткызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Амантаев Алимжан Серикович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Амантаев Алимжан Серикович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Ногай Анастасия Владиславовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Ногай Анастасия Владиславовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Нуралибеков Сардор Шухратович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Нуралибеков Сардор Шухратович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Курмашева Алина Каиржановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Курмашева Алина Каиржановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Орлов Максим Сергеевич", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Орлов Максим Сергеевич", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Акимова Юлия Николаевна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Акимова Юлия Николаевна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Қабылбек Тимур Талғатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Қабылбек Тимур Талғатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Жүнісова Ақниет Болатқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Жүнісова Ақниет Болатқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Алушаев Еділ Бахитжанұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Алушаев Еділ Бахитжанұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
-        parameters = ["Жүнісова Ақерке Үсібәліқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 1]
+        parameters = ["Жүнісова Ақерке Үсібәліқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 1]
         insert_student(apps, parameters)
 
 
-        parameters = ["Антонюк Владислав Викторович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Антонюк Владислав Викторович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user4@mail.ru", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Мухамбеткалиева Диана Асылкановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Мухамбеткалиева Диана Асылкановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user5@mail.ru", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Михаилов Даниел Михаилов", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Михаилов Даниел Михаилов", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user6@mail.ru", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Жиентаева Диана Расуловна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Жиентаева Диана Расуловна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Ермаков Александр Владимирович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Ермаков Александр Владимирович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Казбекова Алина Нурлановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Казбекова Алина Нурлановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Сабыржан Темірлан Берікұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Сабыржан Темірлан Берікұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Аубакирова Гаухар Талгатовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Аубакирова Гаухар Талгатовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Қабаржан Жеңісбай Кенжетайұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Қабаржан Жеңісбай Кенжетайұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Майленова Аягоз Талгаткызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Майленова Аягоз Талгаткызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters) 
         
-        parameters = ["Рамазанов Аргын Ерланович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Рамазанов Аргын Ерланович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Мұхтарова Аружан Қазбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Мұхтарова Аружан Қазбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Беспаев Адиль Айдарулы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Беспаев Адиль Айдарулы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Молшылық Айбану Батырбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Молшылық Айбану Батырбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Серикбаев Нурислам Базаралиугли", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Серикбаев Нурислам Базаралиугли", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Иса Дана Жубаткановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Иса Дана Жубаткановна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Майданов Серік Маратұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Майданов Серік Маратұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Хаятуллаева Гаухар Нұрғалықызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Хаятуллаева Гаухар Нұрғалықызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Уразбаев Абзал Темирбулатович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Уразбаев Абзал Темирбулатович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
 
-        parameters = ["Орынбай Лаура Орынбайқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 2]
+        parameters = ["Орынбай Лаура Орынбайқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 2]
         insert_student(apps, parameters)
         
 
         
-        parameters = ["Нұрділдаев Батухан Оразайұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Нұрділдаев Батухан Оразайұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user7@mail.ru", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Жанабекова Алтынай Жанабековна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Жанабекова Алтынай Жанабековна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user8@mail.ru", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Қожанәсіп Асылхан Азаматұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Қожанәсіп Асылхан Азаматұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Секербаева Амина Айдосқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Секербаева Амина Айдосқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Латиф Қайырбек Нұрғалиұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Латиф Қайырбек Нұрғалиұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Саматова Мөлдір Берғазықызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Саматова Мөлдір Берғазықызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Әбішев Ақбота Болатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Әбішев Ақбота Болатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Киясова Дария Маликовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Киясова Дария Маликовна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Әбдіхалық Есен Үсенұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Әбдіхалық Есен Үсенұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Малғаждарова Ақмаржан Маратқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Малғаждарова Ақмаржан Маратқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters) 
         
-        parameters = ["Мәжит Данияр Бақтиярұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Мәжит Данияр Бақтиярұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Хасенова Эльмира Серікқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Хасенова Эльмира Серікқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Масонов Ернур Жасуланұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Масонов Ернур Жасуланұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Баяхметова Қаламқас Ерліханқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Баяхметова Қаламқас Ерліханқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Шариханов Данияр Бисенбиұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Шариханов Данияр Бисенбиұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Байғараева Жаңыл Ермашқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Байғараева Жаңыл Ермашқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Адай Нұрсейт Жақыпұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Адай Нұрсейт Жақыпұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Шаяхметова Ақбота Саадатқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Шаяхметова Ақбота Саадатқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Тасмурзаев Нурдәулет Мұсаханұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Тасмурзаев Нурдәулет Мұсаханұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
 
-        parameters = ["Әмірхан Бақыт Жұбайханқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 3]
+        parameters = ["Әмірхан Бақыт Жұбайханқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 3]
         insert_student(apps, parameters)
         
 
         
-        parameters = ["Тохтарханов Сұлтан Нұрхатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Тохтарханов Сұлтан Нұрхатұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user9@mail.ru", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Беркінбекова Айнұр Қайратқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Беркінбекова Айнұр Қайратқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "user10@mail.ru", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Санбаев Аскар Марсулы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Санбаев Аскар Марсулы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Еримбетова Майра Мирамбайкызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Еримбетова Майра Мирамбайкызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Бахыт Мейіржан Нұрболұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Бахыт Мейіржан Нұрболұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Есенжанова Айнаш Серікқалиқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Есенжанова Айнаш Серікқалиқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Карамурзаев Найман Абдыевич", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Карамурзаев Найман Абдыевич", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Мустахова Диана Ерланқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Мустахова Диана Ерланқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Елубаев Наурызбек Нұрланұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Елубаев Наурызбек Нұрланұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Қалибай Қанағат Балтабайқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Қалибай Қанағат Балтабайқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters) 
         
-        parameters = ["Махметов Темирлан Муратович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Махметов Темирлан Муратович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Муратова Зарина Уразгалиевна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Муратова Зарина Уразгалиевна", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Төлеуов Елнар Қуанұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Төлеуов Елнар Қуанұлы", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Әшімбек Жансулу Султанбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Әшімбек Жансулу Султанбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Оразтаев Дастан Мадениетович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Оразтаев Дастан Мадениетович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Баязитова Самал Асылбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Баязитова Самал Асылбекқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Абдусадиков Садир Маннабугли", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Абдусадиков Садир Маннабугли", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Имашева Аяулым Қайратқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Имашева Аяулым Қайратқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Сериков Нурсултан Талгатбекович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Сериков Нурсултан Талгатбекович", "М", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
 
-        parameters = ["Сағын Аружан Сағынқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), 4]
+        parameters = ["Сағын Аружан Сағынқызы", "Ж", get_random_date(datetime.strptime("01.09.2005", "%d.%m.%Y"), datetime.strptime("31.08.2006", "%d.%m.%Y")), get_telefon(), get_adres(True), "", 4]
         insert_student(apps, parameters)
         
         print("Студенты ok")

@@ -8,7 +8,7 @@
 {% block content %}
 
 <div class="div-width-100-text-center">
-	<h1>Расписание</h1>
+	<h1>{% trans "schedules" %}</h1>
 </div>
 <div class="row">
 	<div class="col-lg-10 border" style="padding:10px;">		
@@ -34,7 +34,7 @@
 	</div>
 	<div class="col-lg-2 border" style="padding:10px;">
 		<div class="div-width-100-text-center">
-			<h3>Новости</h3>
+			<h3>{% trans "news" %}</h3>
 		</div>
 		{% if news14.count > 0 %}
 			{% for c in news14 %}

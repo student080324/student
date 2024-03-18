@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "ratings" %}</h2>
+<hr>
+{% if rating.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "dater" %}</p></th>
+				<th><p>{% trans "course" %}</p></th>
+				<th><p>{% trans "semester" %}</p></th>
+				<th><p>{% trans "discipline" %}</p></th>
+				<th><p>{% trans "student" %}</p></th>
+				<th><p>{% trans "value" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in rating %}
+			<tr>
+				<td><p>{{ p.dater | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ p.course }}</p></td>	
+				<td><p>{{ p.semester }}</p></td>	
+				<td><p>{{ p.discipline }}</p></td>	
+				<td><p>{{ p.student }}</p></td>	
+				<td><p>{{ p.value }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

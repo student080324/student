@@ -17,6 +17,7 @@
 				<th><p>{% trans "birthday" %}</p></th>
 				<th><p>{% trans "phone" %}</p></th>
 				<th><p>{% trans "address" %}</p></th>
+				<th><p>{% trans "EMail" %}</p></th>
 				<th><p>{% trans "gruppa" %}</p></th>
 				<th><p></p></th>				
 			</tr>
@@ -30,6 +31,7 @@
 				<td><p>{{ p.birthday | date:"d.m.Y" }}</p></td>	
 				<td><p>{{ p.phone }}</p></td>	
 				<td><p>{{ p.address }}</p></td>	
+				<td><p>{{ p.email }}</p></td>	
 				<td><p>{{ p.gruppa }}</p></td>	
 				<td>						
 					<p>
