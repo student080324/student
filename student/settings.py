@@ -111,10 +111,10 @@ DATABASES = {
     
     'default': {
 	    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	    'NAME': 'student_p1b0',
+	    'NAME': 'student_b1nt',
 	    'USER' : 'student_admin',
-	    'PASSWORD' : 'vMfsOgdhypQV6vidmmMZW08pUdtvEgnH',
-	    'HOST' : 'dpg-cns5krgcmk4c73bnf9ug-a.frankfurt-postgres.render.com',
+	    'PASSWORD' : '4ZqWLyVXFjBWI8WSERVQ32o98AX2CUfM',
+	    'HOST' : 'dpg-cppahkmehbks73buk9i0-a.frankfurt-postgres.render.com',
 	    'PORT' : '5432',
     }
 }
